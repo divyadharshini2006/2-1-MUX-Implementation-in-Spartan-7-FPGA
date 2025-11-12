@@ -71,29 +71,6 @@ and g4(W[4],S[0],S[1],I[3]);
 or g5(y,W[1],W[2],W[3],W[4]);
 endmodule
 
-module mux4_tb;
-reg [3:0]I;
-reg [1:0]S;
-wire y;
-mux4 uut(I,S,y);
-initial
-begin
-I=4'b1011;
-S=2'b00;
-#10;
-$display("selection is %b %b , output is %b",S[1],S[0],y);
-S=2'b01;
-#10;
-$display("selection is %b %b , output is %b",S[1],S[0],y);
-S=2'b10;
-#10;
-$display("selection is %b %b , output is %b",S[1],S[0],y);
-S=2'b11;
-#10;
-$display("selection is %b %b , output is %b",S[1],S[0],y);
-$finish;
-end 
-endmodule
 ```
 ## Constraint file for Seven-Segment Display
 ``` 
